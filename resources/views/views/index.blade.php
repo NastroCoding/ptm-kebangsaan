@@ -95,7 +95,7 @@
                     <div class="text-center mt-5">
                         <h2 class="display-5 fw-bolder"><span class="d-inline">Tentang Kami</span></h2>
                         <p class="lead fw-light mb-4">Awal dari kebersamaan PTM Kebangsaan</p>
-                        <p class="text-muted">Bermula dari hobby yg sama untuk bermain ping-pong yg awalnya hanya sebatas
+                        <p class="text-muted">Bermula dari hobby yang sama untuk bermain ping-pong yg awalnya hanya sebatas
                             warga RT
                             11 RW 05 Kelurahan Ragunan, semakin berjalannya waktu, semakin banyak juga yg bergabung, maka
                             berdasarkan
