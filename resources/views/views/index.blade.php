@@ -4,7 +4,7 @@
     <header class="py-5">
         <div class="container px-5 pb-5 text-images">
             <div class="row gx-5 align-items-center">
-                <div class="col-xxl-5">
+                <div class="col-xxl-5" id="customBannerText">
                     <!-- Header text content-->
                     <div class="text-center text-xxl-start">
                         <div class="badge bg-danger text-white mb-4">
@@ -18,10 +18,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xxl-7">
+                <div class="col-xxl-7" id="customBannerImage">
                     <!-- Header profile picture-->
-                    <div class="d-flex justify-content-center mt-5 mt-xxl-0">
-                        <img class="profile-img mb-3" width="50%" src="{{ URL::asset('dist/assets/logo.png') }}"
+                    <div class="mt-5 mt-xxl-0">
+                        <img class="profile-img mb-3" width="100%" src="{{ URL::asset('dist/assets/logo.png') }}"
                             alt="..." />
                     </div>
                 </div>
@@ -37,28 +37,30 @@
             <div class="row">
                 <div class="col-md-4 my-2">
                     <div class="card">
-                        <img src="{{ URL::asset('dist/assets/pak-joko.png') }}" class="card-img-top" alt="...">
+                        <img src="{{ URL::asset('dist/assets/img/slide1.jpeg') }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title"><b>Joko Suranto, SE, MM</b></h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Ketua PTM Kebangsaan</h6>
+                            <h5 class="card-title"><b>Lomba Tenis Meja</b></h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">PTM Kebangsaan melaksanakan lomba 17 Agustus ....</h6>
+                            <small>17 Agustus 2023</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 my-2">
                     <div class="card">
-                        <img src="{{ URL::asset('dist/assets/pak-joko.png') }}" class="card-img-top" alt="...">
+                        <img src="{{ URL::asset('dist/assets/img/slide1.jpeg') }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Joko Suratno</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Ketua PTM Kebangsaan</h6>
+                            <h5 class="card-title"><b>Lomba Tenis Meja</b></h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">PTM Kebangsaan melaksanakan lomba 17 Agustus ....</h6>
+                            <small>17 Agustus 2023</small>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 my-2">
+                </div><div class="col-md-4 my-2">
                     <div class="card">
-                        <img src="{{ URL::asset('dist/assets/pak-joko.png') }}" class="card-img-top" alt="...">
+                        <img src="{{ URL::asset('dist/assets/img/slide1.jpeg') }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Joko Suratno</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Ketua PTM Kebangsaan</h6>
+                            <h5 class="card-title"><b>Lomba Tenis Meja</b></h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">PTM Kebangsaan melaksanakan lomba 17 Agustus ....</h6>
+                            <small>17 Agustus 2023</small>
                         </div>
                     </div>
                 </div>
@@ -110,7 +112,7 @@
                     <div class="maps">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.718374504477!2d106.8176782!3d-6.3006877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69effcaf0dfc83%3A0x533e5f6bf9a59166!2sPTM%20KBS%20(%20KEBANGSAAN%20)!5e0!3m2!1sen!2sid!4v1712404245922!5m2!1sen!2sid"
-                            style="border:0;" height="650" allowfullscreen="" loading="lazy" class="w-100"
+                            style="border:0;" height="350" allowfullscreen="" loading="lazy" class="w-100 rounded"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                             <p></p>
                     </div>

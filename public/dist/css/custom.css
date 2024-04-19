@@ -1,0 +1,22 @@
+#customBannerText {
+    width: 60%;
+    float: left;
+}
+
+#customBannerImage {
+    width: 40%;
+    float: right;
+}
+
+@media  screen and (max-width:992px) {
+    #customBannerImage {
+        width: 75%;
+        float: none;
+        margin: auto;
+    }
+
+    #customBannerText {
+        width: 100%;
+        float: none;
+    }
+}
