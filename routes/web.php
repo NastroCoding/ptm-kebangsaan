@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\RouteController;
 use Illuminate\Support\Facades\Route;
@@ -23,6 +24,11 @@ Route::controller(RouteController::class)->group(function (){
     Route::get('/galeri', 'gallery');
     Route::get('/aktifitas', 'activity');
     Route::get('/kontak', 'contact');
+});
+
+Route::controller(AuthController::class)->group(function(){
+    Route::get('/signin', 'loginPage');
+    Route::post('/login', 'login');
 });
 
 Route::controller(GalleryController::class)->group(function(){
