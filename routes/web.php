@@ -20,17 +20,17 @@ Route::get('/', function () {
     return view('views.index');
 });
 
-Route::controller(RouteController::class)->group(function (){
+Route::controller(RouteController::class)->group(function () {
     Route::get('/galeri', 'gallery');
     Route::get('/aktifitas', 'activity');
     Route::get('/kontak', 'contact');
+    Route::get('/admin/dashboard', 'admin');
 });
 
-Route::controller(AuthController::class)->group(function(){
+Route::controller(AuthController::class)->group(function () {
     Route::get('/signin', 'loginPage');
     Route::post('/login', 'login');
 });
 
-Route::controller(GalleryController::class)->group(function(){
-    
+Route::controller(GalleryController::class)->group(function () {
 });

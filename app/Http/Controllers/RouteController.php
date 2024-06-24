@@ -6,15 +6,23 @@ use Illuminate\Http\Request;
 
 class RouteController extends Controller
 {
-    public function gallery(){
+    public function gallery()
+    {
         return view('views.gallery');
     }
 
-    public function activity(){
+    public function activity()
+    {
         return view('views.activity');
     }
 
-    public function contact(){
+    public function contact()
+    {
         return view('views.contact');
+    }
+
+    public function admin()
+    {
+        return view('admin.dashboard');
     }
 }
