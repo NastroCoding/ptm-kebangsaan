@@ -23,6 +23,22 @@ class RouteController extends Controller
 
     public function admin()
     {
-        return view('admin.dashboard');
+        return view('admin.dashboard', [
+            'page' => 'Dashboard'
+        ]);
+    }
+
+    public function adminActivity()
+    {
+        return view('admin.activity', [
+            'page' => 'Activity'
+        ]);
+    }
+
+    public function adminGallery()
+    {
+        return view('admin.gallery', [
+            'page' => 'Gallery'
+        ]);
     }
 }

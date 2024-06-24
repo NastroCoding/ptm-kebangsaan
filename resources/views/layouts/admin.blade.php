@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>AdminLTE v4 | Dashboard</title><!--begin::Primary Meta Tags-->
+    <title>PTM Kebangsaan | {{ $page }}</title><!--begin::Primary Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="AdminLTE v4 | Dashboard">
     <meta name="author" content="ColorlibHQ">
@@ -44,7 +44,7 @@
             </div> <!--end::Container-->
         </nav> <!--end::Header--> <!--begin::Sidebar-->
         <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="light"> <!--begin::Sidebar Brand-->
-            <div class="sidebar-brand"> <!--begin::Brand Link--> <a href="./index.html" class="brand-link">
+            <div class="sidebar-brand"> <!--begin::Brand Link--> <a href="/admin/dashboard" class="brand-link">
                     <!--begin::Brand Image--> <img src="{{ URL::asset('dist/assets/logo.png') }}" alt=""
                         class="brand-image opacity-75"> <!--end::Brand Image-->
                     <!--begin::Brand Text--> <span class="brand-text fw-bolder"><span class="text-danger">PTM</span>
@@ -56,13 +56,16 @@
                 <nav class="mt-2"> <!--begin::Sidebar Menu-->
                     <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu"
                         data-accordion="false">
-                        <li class="nav-item"> <a href="" class="nav-link"> <i class="nav-icon bi bi-circle"></i>
+                        <li class="nav-item"> <a href="/admin/activity" class="nav-link"> <i
+                                    class="nav-icon bi bi-activity"></i>
                                 <p>Activity</p>
                             </a> </li>
-                        <li class="nav-item"> <a href="" class="nav-link"> <i class="nav-icon bi bi-circle"></i>
+                        <li class="nav-item"> <a href="/admin/gallery" class="nav-link"> <i
+                                    class="nav-icon bi bi-image"></i>
                                 <p>Gallery</p>
                             </a> </li>
-                        <li class="nav-item"> <a href="" class="nav-link"> <i class="nav-icon bi bi-circle"></i>
+                        <li class="nav-item"> <a href="" class="nav-link"> <i
+                                    class="nav-icon bi bi-three-dots"></i>
                                 <p>Others</p>
                             </a> </li>
                     </ul> <!--end::Sidebar Menu-->
@@ -74,7 +77,7 @@
         </main> <!--end::App Main--> <!--begin::Footer-->
         <footer class="app-footer"> <!--begin::To the end-->
             <!--begin::Copyright--> <strong>
-                Copyright &copy; <b><a href="https://adminlte.io" class="text-decoration-none">PTM Kebangsaan</a>.</b>
+                Copyright &copy; <b><a href="/" class="text-decoration-none">PTM Kebangsaan</a>.</b>
                 2024
             </strong>
             <!--end::Copyright-->

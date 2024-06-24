@@ -25,6 +25,8 @@ Route::controller(RouteController::class)->group(function () {
     Route::get('/aktifitas', 'activity');
     Route::get('/kontak', 'contact');
     Route::get('/admin/dashboard', 'admin');
+    Route::get('/admin/activity', 'adminActivity');
+    Route::get('/admin/gallery', 'adminGallery');
 });
 
 Route::controller(AuthController::class)->group(function () {

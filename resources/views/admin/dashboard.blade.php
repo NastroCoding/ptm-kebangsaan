@@ -9,7 +9,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-end">
                         <li class="breadcrumb-item active" aria-current="page">
-                            Dashboard
+                            Home
                         </li>
                     </ol>
                 </div>
