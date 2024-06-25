@@ -31,14 +31,21 @@ class RouteController extends Controller
     public function adminActivity()
     {
         return view('admin.activity', [
-            'page' => 'Activity'
+            'page' => 'Aktifitas'
         ]);
     }
 
     public function adminGallery()
     {
         return view('admin.gallery', [
-            'page' => 'Gallery'
+            'page' => 'Galeri'
+        ]);
+    }
+
+    public function adminInbox()
+    {
+        return view('admin.inbox', [
+            'page' => 'Inbox'
         ]);
     }
 }

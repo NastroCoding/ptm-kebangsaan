@@ -58,16 +58,30 @@
                         data-accordion="false">
                         <li class="nav-item"> <a href="/admin/activity" class="nav-link"> <i
                                     class="nav-icon bi bi-activity"></i>
-                                <p>Activity</p>
+                                <p>Aktifitas</p>
                             </a> </li>
                         <li class="nav-item"> <a href="/admin/gallery" class="nav-link"> <i
                                     class="nav-icon bi bi-image"></i>
-                                <p>Gallery</p>
+                                <p>Galeri</p>
                             </a> </li>
-                        <li class="nav-item"> <a href="" class="nav-link"> <i
+                        <li class="nav-item"> <a href="#" class="nav-link"> <i
                                     class="nav-icon bi bi-three-dots"></i>
-                                <p>Others</p>
-                            </a> </li>
+                                <p>
+                                    Lainnya
+                                    <i class="nav-arrow bi bi-chevron-right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item"> <a href="/admin/inbox" class="nav-link"> <i
+                                            class="nav-icon bi bi-inbox"></i>
+                                        <p>Inbox</p>
+                                    </a> </li>
+                                <li class="nav-item"> <a href="#" class="nav-link"> <i
+                                            class="nav-icon bi bi-person"></i>
+                                        <p>Pengurus & Jajaran</p>
+                                    </a> </li>
+                            </ul>
+                        </li>
                     </ul> <!--end::Sidebar Menu-->
                 </nav>
             </div> <!--end::Sidebar Wrapper-->
