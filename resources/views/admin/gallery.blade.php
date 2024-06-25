@@ -31,13 +31,13 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Aktifitas</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Galeri</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="formFile" class="form-label">Masukkan Gambar <span style="font-size:75%;">*Bisa memilih
-                                dari 1 gambar</span></label>
+                                lebih dari 1 gambar</span></label>
                         <input class="form-control" type="file" id="formFile" accept="image/*" multiple>
                         <div id="imageContainer"></div>
                     </div>
