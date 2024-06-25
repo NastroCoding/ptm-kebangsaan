@@ -28,31 +28,47 @@
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
                         <div class="card h-100">
-                            <img src="{{ URL::asset('dist/assets/pak-joko.png') }}" class="card-img-top"
-                                alt="{{ URL::asset('dist/assets/pak-joko.png') }}">
+                            <img src="{{ URL::asset('dist/assets/pak-joko.png') }}" class="card-img-top" alt="">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                    to
+                                <h5>Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                                     additional content. This content is a little bit longer.</p>
+                                <small class="text-muted">17 Agustus 1945</small>
                             </div>
                             <div class="card-footer">
-                                <button class="btn btn-info text-white">Edit</button>
-                                <button class="btn btn-danger text-white">Delete</button>
+                                <button class="btn btn-outline-info"><i class="bi bi-pencil"></i></button>
+                                <button class="btn btn-outline-danger"><i class="bi bi-trash"></i></button>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card h-100">
-                            <img src="{{ URL::asset('dist/assets/pak-joko.png') }}" class="card-img-top"
-                                alt="{{ URL::asset('dist/assets/pak-joko.png') }}">
+                            <img src="{{ URL::asset('dist/assets/pak-joko.png') }}" class="card-img-top" alt="">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a short card.</p>
+                                <h5>Card title</h5>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                                    content.</p>
+                                <small class="text-muted">17 Agustus 1945</small>
                             </div>
                             <div class="card-footer">
-                                <button class="btn btn-info text-white">Edit</button>
-                                <button class="btn btn-danger text-white">Delete</button>
+                                <button class="btn btn-outline-info"><i class="bi bi-pencil"></i></button>
+                                <button class="btn btn-outline-danger"><i class="bi bi-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="{{ URL::asset('dist/assets/pak-joko.png') }}" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5>Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This card has even longer content than the first to show that equal
+                                    height action.</p>
+                                <small class="text-muted">17 Agustus 1945</small>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-outline-info"><i class="bi bi-pencil"></i></button>
+                                <button class="btn btn-outline-danger"><i class="bi bi-trash"></i></button>
                             </div>
                         </div>
                     </div>
