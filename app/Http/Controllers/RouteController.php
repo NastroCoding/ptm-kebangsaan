@@ -15,7 +15,10 @@ class RouteController extends Controller
 
     public function activity()
     {
-        return view('views.activity');
+        $activity = Activity::latest()->get();
+        return view('views.activity', [
+            'activities' => $activity,
+        ]);
     }
 
     public function contact()
@@ -41,11 +44,15 @@ class RouteController extends Controller
 
     public function adminGallery()
     {
-        $gallery = Gallery::latest()->get();
+        $images = Gallery::all()->map(function ($image) {
+            list($width, $height) = getimagesize(storage_path('app/' . $image->image));
+            $image->isPortrait = $height > $width;
+            return $image;
+        });
+
         return view('admin.gallery', [
             'page' => 'Galeri',
-            'images' => $gallery
-        ]);
+        ], compact('images'));
     }
 
     public function adminInbox()

@@ -14,29 +14,30 @@
                         <!-- Note: Set the link href target to a PDF file within your project-->
                     </div>
                     <!-- Experience Card 1-->
-                    <div class="card shadow border-0 rounded-4 mb-5">
-                        <div class="card-body p-5">
-                            <div class="col-md-12">
-                                <div class="text-center">
-                                    <img src="{{ URL::asset('dist/assets/img/slide1.jpeg') }}" class="img-fluid rounded" alt="...">
+                    @foreach ($activities as $act)
+                        <div class="card shadow border-0 rounded-4 mb-5">
+                            <div class="card-body p-5">
+                                <div class="col-md-12">
+                                    <div class="text-center">
+                                        <img src="{{ Storage::url($act->images) }}" class="img-fluid rounded"
+                                            alt="...">
+                                    </div>
+                                    <h5 class="mt-5"><b>{{ $act->title }}</b></h5>
+                                    <h6 class="mb-2 text-body-secondary">
+                                        {{ $act->description }}
+                                    </h6>
+                                    <small>{{ date('d M Y', strtotime($act->date)); }}</small>
                                 </div>
-                                <h5 class="mt-5"><b>Lomba Tenis Meja</b></h5>
-                                <h6 class="mb-2 text-body-secondary">
-                                    PTM Kebangsaan melaksanakan lomba 17 Agustus ....
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, deserunt!
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, deserunt!
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
-                                </h6>
-                                <small>17 Agustus 2023</small>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                     <!-- Experience Card 2-->
                     <div class="card shadow border-0 rounded-4 mb-5">
                         <div class="card-body p-5">
                             <div class="col-md-12">
                                 <div class="text-center">
-                                    <img src="{{ URL::asset('dist/assets/img/slide1.jpeg') }}" class="img-fluid rounded" alt="...">
+                                    <img src="{{ URL::asset('dist/assets/img/slide1.jpeg') }}" class="img-fluid rounded"
+                                        alt="...">
                                 </div>
                                 <h5 class="mt-5"><b>Lomba Tenis Meja</b></h5>
                                 <h6 class="mb-2 text-body-secondary">
