@@ -43,6 +43,8 @@ Route::middleware('auth:sanctum')->group(function(){
 
     Route::controller(ActivityController::class)->group(function(){
         Route::post('/admin/activity/create', 'store');
+        Route::post('/admin/activity/edit/{id}', 'update');
+        Route::post('/admin/activity/delete/{id}', 'destroy');
     });
 });
 

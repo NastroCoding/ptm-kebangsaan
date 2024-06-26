@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Activity;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class ActivityController extends Controller
@@ -33,5 +34,48 @@ class ActivityController extends Controller
         ]);
 
         return redirect()->back()->with('success', 'Aktifitas berhasil dibuat!');
+    }
+
+    public function update(Request $request, $id) {
+        $request->validate([
+            'image' => 'nullable|mimes:jpg,png,webp,jpeg,gif',
+            'title' => 'required',
+            'description' => 'required',
+            'date' => 'required',
+        ]);
+    
+        $activity = Activity::findOrFail($id);
+    
+        if($request->hasFile('image')){
+            if ($activity->images) {
+                Storage::delete($activity->images);
+            }
+            $image = $request->image;
+            $imageName = $request->title . '.' . $image->getClientOriginalExtension();
+            $path = $image->storeAs('public/activities', $imageName);
+        } else {
+            $path = $activity->images;
+        }
+    
+        $activity->update([
+            'title' => $request->title,
+            'images' => $path,
+            'description' => $request->description,
+            'date' => $request->date,
+        ]);
+    
+        return redirect()->back()->with('success', 'Aktifitas berhasil diperbarui!');
+    }
+
+    public function destroy($id) {
+        $activity = Activity::findOrFail($id);
+    
+        if ($activity->images) {
+            Storage::delete($activity->images);
+        }
+    
+        $activity->delete();
+    
+        return redirect()->back()->with('success', 'Aktifitas berhasil dihapus!');
     }
 }

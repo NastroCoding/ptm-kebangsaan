@@ -41,10 +41,10 @@ class RouteController extends Controller
 
     public function adminGallery()
     {
-        $gallery = Gallery::latest();
+        $gallery = Gallery::latest()->get();
         return view('admin.gallery', [
             'page' => 'Galeri',
-            'gallery' => $gallery
+            'images' => $gallery
         ]);
     }
 
