@@ -35,10 +35,37 @@
                     </div>
                 </section>
 
-                <div class="text-center">
-                    <img src="{{ URL::asset('dist/assets/img/Vertical-slide.jpg') }}" width="30%" class="rounded float-left m-1" alt="...">
-                    <img src="{{ URL::asset('dist/assets/img/slide1.jpeg') }}" width="30%" class="rounded m-1" alt="...">
-                    <img src="{{ URL::asset('dist/assets/img/slide3.jpeg') }}" width="30%" class="rounded float-right m-1" alt="...">
+                <div class="row">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        @foreach ($images as $image)
+                        @if ($image->isPortrait == false)
+                        <div class="col">
+                            <div class="card h-100">
+                                <a href="{{ Storage::url($image->image) }}">
+                                    <img src="{{ Storage::url($image->image) }}"
+                                        class="card-img-top" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        @endif
+                        @endforeach
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        @foreach ($images as $image)
+                        @if ($image->isPortrait == true)
+                        <div class="col">
+                            <div class="card h-100">
+                                <a href="{{ Storage::url($image->image) }}">
+                                    <img src="{{ Storage::url($image->image) }}"
+                                        class="card-img-top" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        @endif
+                        @endforeach
+                    </div>
                 </div>
 
             </div>
