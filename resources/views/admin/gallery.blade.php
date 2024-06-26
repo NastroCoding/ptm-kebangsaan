@@ -53,6 +53,8 @@
         </div> <!--end::Container-->
     </div> <!--end::App Content-->
     <!-- Modal -->
+    <form action="/admin/gallery/create" method="POST" enctype="multipart/form-data">
+    @csrf
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -60,8 +62,6 @@
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Galeri</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="/admin/gallery/create" method="POST" enctype="multipart/form-data">
-                    @csrf
                     <div class="modal-body">
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
@@ -70,7 +70,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Masukkan Gambar</label>
-                            <input class="form-control" name="image" type="file" id="formFile" accept="image/*"
+                            <input class="form-control" name="images[]" type="file" id="formFile" accept="image/*"
                                 multiple>
                             <div id="imageContainer"></div>
                         </div>
@@ -79,10 +79,10 @@
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-success">Tambahkan</button>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
     <script>
         formFile.onchange = evt => {
             const files = formFile.files;
