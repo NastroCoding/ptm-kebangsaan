@@ -39,7 +39,9 @@
                                     <button class="btn btn-outline-info" data-bs-toggle="modal"
                                         data-bs-target="#edit-modal{{ $act->id }}"><i
                                             class="bi bi-pencil"></i></button>
-                                    <button class="btn btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                    <button class="btn btn-outline-danger" data-bs-toggle="modal"
+                                        data-bs-target="#delete-modal{{ $act->id }}"><i
+                                            class="bi bi-trash"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -129,6 +131,28 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-success">Simpan Perubahan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <form action="/admin/activity/delete/{{ $act->id }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <div class="modal fade" id="delete-modal{{ $act->id }}" tabindex="-1"
+                aria-labelledby="add-modalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="add-modalLabel">Hapus Akifitas</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Yakin untuk menghapus aktifitas ini?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-danger">Hapus</button>
                         </div>
                     </div>
                 </div>
