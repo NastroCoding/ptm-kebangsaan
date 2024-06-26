@@ -10,7 +10,12 @@ class RouteController extends Controller
 {
     public function gallery()
     {
-        return view('views.gallery');
+        $images = Gallery::all()->map(function ($image) {
+            list($width, $height) = getimagesize(storage_path('app/' . $image->image));
+            $image->isPortrait = $height > $width;
+            return $image;
+        });
+        return view('views.gallery', compact('images'));
     }
 
     public function activity()

@@ -39,17 +39,32 @@
             <div class="row">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     @foreach ($images as $image)
-                        <div class="col">
-                            <div class="card h-100">
-                                <a href="{{ Storage::url($image->image) }}">
-                                    <img src="{{ Storage::url($image->image) }}"
-                                        class="card-img-top {{ $image->isPortrait ? 'vertical' : '' }}" alt="">
-                                </a>
-                                <div class="card-body">
-                                    <h5>{{ $image->title }}</h5>
-                                </div>
+                    @if ($image->isPortrait == false)
+                    <div class="col">
+                        <div class="card h-100">
+                            <a href="{{ Storage::url($image->image) }}">
+                                <img src="{{ Storage::url($image->image) }}"
+                                    class="card-img-top" alt="">
+                            </a>
+                            <div class="card-body">
+                                <h5>{{ $image->title }}</h5>
                             </div>
                         </div>
+                    </div>
+                    @endif
+                    @if ($image->isPortrait == true)
+                    <div class="col">
+                        <div class="card h-100">
+                            <a href="{{ Storage::url($image->image) }}">
+                                <img src="{{ Storage::url($image->image) }}"
+                                    class="card-img-top {{ $image->isPortrait ? 'vertical' : '' }}" alt="">
+                            </a>
+                            <div class="card-body">
+                                <h5>{{ $image->title }}</h5>
+                            </div>
+                        </div>
+                    </div>
+                    @endif
                     @endforeach
                 </div>
             </div>
