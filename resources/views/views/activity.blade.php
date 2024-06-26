@@ -26,7 +26,7 @@
                                     <h6 class="mb-2 text-body-secondary">
                                         {{ $act->description }}
                                     </h6>
-                                    <small>{{ date('d M Y', strtotime($act->date)); }}</small>
+                                    <small>{{ date('d M Y', strtotime($act->date)) }}</small>
                                 </div>
                             </div>
                         </div>
