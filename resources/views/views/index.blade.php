@@ -97,13 +97,13 @@
                     <div class="text-center mt-5">
                         <h2 class="display-5 fw-bolder"><span class="d-inline">Tentang Kami</span></h2>
                         <p class="lead fw-light mb-4">Awal dari kebersamaan PTM Kebangsaan</p>
-                        <p class="text-muted">Bermula dari hobby yang sama untuk bermain ping-pong yg awalnya hanya sebatas
-                            warga RT
-                            11 RW 05 Kelurahan Ragunan, semakin berjalannya waktu, semakin banyak juga yg bergabung, maka
+                        <p class="text-muted">Bermula dari hobby yang sama untuk bermain ping-pong yang awalnya hanya sebatas
+                            warga <b>RT
+                            11 RW 05 Kelurahan Ragunan</b>, semakin berjalannya waktu, semakin banyak juga yang bergabung, maka
                             berdasarkan
                             kesepakatan bersama dimulai lah pembangunan <b>PTM KBS</b> dengan cara sumbangan sukarela dan
                             kerja gotong
-                            royong semua anggota yang pembangunan nya dimulai pada bulan Januari dan selesai bulan February
+                            royong semua anggota yang pembangunan nya dimulai pada bulan Januari dan selesai bulan Februari
                             2023..
                             berdirilah <b>PTM KBS</b> yang beralamat di <b>Gang Pahala Bawah RT 11 RW 05 No. 92 Kel.
                                 Ragunan...</b> </p>

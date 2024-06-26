@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Activity;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 
 class RouteController extends Controller
@@ -30,15 +32,19 @@ class RouteController extends Controller
 
     public function adminActivity()
     {
+        $activity = Activity::latest()->get();
         return view('admin.activity', [
-            'page' => 'Aktifitas'
+            'page' => 'Aktifitas',
+            'activities' => $activity,
         ]);
     }
 
     public function adminGallery()
     {
+        $gallery = Gallery::latest();
         return view('admin.gallery', [
-            'page' => 'Galeri'
+            'page' => 'Galeri',
+            'gallery' => $gallery
         ]);
     }
 

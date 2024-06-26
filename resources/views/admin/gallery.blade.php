@@ -1,7 +1,19 @@
 @extends('layouts.admin')
 @section('container')
-    <div class="app-content-header"> <!--begin::Container-->
-        <div class="container-fluid"> <!--begin::Row-->
+<div class="app-content-header"> <!--begin::Container-->
+    <div class="container-fluid"> <!--begin::Row-->
+        @if ($errors->any())
+            @foreach ($errors->all() as $error)
+                <div class="alert alert-danger">
+                    <p>{{$error}}</p>
+                </div>
+            @endforeach
+        @endif
+        @if (session()->has('success'))
+                <div class="alert alert-success">
+                    <p>{{session()->get('success')}}</p>
+                </div>
+        @endif
             <div class="row">
                 <div class="col-sm-6">
                     <h3 class="mb-0">Galeri</h3>
@@ -34,18 +46,26 @@
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Galeri</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="formFile" class="form-label">Masukkan Gambar <span style="font-size:75%;">*Bisa memilih
-                                lebih dari 1 gambar</span></label>
-                        <input class="form-control" type="file" id="formFile" accept="image/*" multiple>
-                        <div id="imageContainer"></div>
+                <form action="/admin/gallery/create" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="modal-body">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"
+                                name="title">
+                            <label for="floatingInput">Judul</label>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Masukkan Gambar</label>
+                            <input class="form-control" name="image" type="file" id="formFile" accept="image/*"
+                                multiple>
+                            <div id="imageContainer"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success">Tambahkan</button>
-                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success">Tambahkan</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

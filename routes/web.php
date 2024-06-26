@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\RouteController;
@@ -24,16 +25,25 @@ Route::controller(RouteController::class)->group(function () {
     Route::get('/galeri', 'gallery');
     Route::get('/aktifitas', 'activity');
     Route::get('/kontak', 'contact');
-    Route::get('/admin/dashboard', 'admin');
-    Route::get('/admin/activity', 'adminActivity');
-    Route::get('/admin/gallery', 'adminGallery');
-    Route::get('/admin/inbox', 'adminInbox');
+    Route::get('/admin/dashboard', 'admin')->middleware('auth:sanctum');
+    Route::get('/admin/activity', 'adminActivity')->middleware('auth:sanctum');
+    Route::get('/admin/gallery', 'adminGallery')->middleware('auth:sanctum');
+    Route::get('/admin/inbox', 'adminInbox')->middleware('auth:sanctum');
 });
 
 Route::controller(AuthController::class)->group(function () {
-    Route::get('/signin', 'loginPage');
+    Route::get('/signin', 'loginPage')->name('login');
     Route::post('/login', 'login');
 });
 
-Route::controller(GalleryController::class)->group(function () {
+Route::middleware('auth:sanctum')->group(function(){
+    Route::controller(GalleryController::class)->group(function () {
+        Route::post('/admin/gallery/create', 'store');
+    });
+
+    Route::controller(ActivityController::class)->group(function(){
+        Route::post('/admin/activity/create', 'store');
+    });
 });
+
+
