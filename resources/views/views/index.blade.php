@@ -13,7 +13,7 @@
                         <div class="fs-3 fw-light text-muted">Ping-pong</div>
                         <h1 class="display-3 fw-bolder mb-5"><span class="d-inline">Mempertemukan dan Menyatukan</span></h1>
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                            <a class="btn btn-danger btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="/activity">Aktifitas</a>
+                            <a class="btn btn-danger btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="/aktifitas">Aktifitas</a>
                             <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="/galeri">Galeri</a>
                         </div>
                     </div>
@@ -35,35 +35,18 @@
         </div>
         <div class="container">
             <div class="row">
+                @foreach ($activities as $act)
                 <div class="col-md-4 my-2">
                     <div class="card">
-                        <img src="{{ URL::asset('dist/assets/img/slide1.jpeg') }}" class="card-img-top" alt="...">
+                        <img src="{{ Storage::url($act->images) }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title"><b>Lomba Tenis Meja</b></h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">PTM Kebangsaan melaksanakan lomba 17 Agustus ....</h6>
-                            <small>17 Agustus 2023</small>
+                            <h5 class="card-title"><b>{{ $act->title }}</b></h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">{{ $act->description }}</h6>
+                            <small>{{ date('D, d M Y', strtotime($act->date)); }}</small>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 my-2">
-                    <div class="card">
-                        <img src="{{ URL::asset('dist/assets/img/slide1.jpeg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"><b>Lomba Tenis Meja</b></h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">PTM Kebangsaan melaksanakan lomba 17 Agustus ....</h6>
-                            <small>17 Agustus 2023</small>
-                        </div>
-                    </div>
-                </div><div class="col-md-4 my-2">
-                    <div class="card">
-                        <img src="{{ URL::asset('dist/assets/img/slide1.jpeg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"><b>Lomba Tenis Meja</b></h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">PTM Kebangsaan melaksanakan lomba 17 Agustus ....</h6>
-                            <small>17 Agustus 2023</small>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

@@ -4,6 +4,7 @@ use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\RouteController;
+use App\Models\Activity;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +19,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('views.index');
+    $activity = Activity::latest()->get();
+    return view('views.index', [
+        'activities' => $activity,
+    ]);
 });
 
 Route::controller(RouteController::class)->group(function () {
