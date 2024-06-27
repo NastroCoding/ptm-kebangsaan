@@ -38,32 +38,32 @@
                 <div class="row">
                     <div class="row row-cols-1 row-cols-md-3 g-4">
                         @foreach ($images as $image)
-                        @if ($image->isPortrait == false)
-                        <div class="col">
-                            <div class="card h-100">
-                                <a href="{{ Storage::url($image->image) }}">
-                                    <img src="{{ Storage::url($image->image) }}"
-                                        class="card-img-top" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        @endif
+                            @if ($image->isPortrait == false)
+                                <div class="col">
+                                    <div class="h-100">
+                                        <a href="{{ Storage::url($image->image) }}">
+                                            <img src="{{ Storage::url($image->image) }}" class="card-img-top"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            @endif
                         @endforeach
                     </div>
                 </div>
                 <div class="row">
                     <div class="row row-cols-1 row-cols-md-3 g-4">
                         @foreach ($images as $image)
-                        @if ($image->isPortrait == true)
-                        <div class="col">
-                            <div class="card h-100">
-                                <a href="{{ Storage::url($image->image) }}">
-                                    <img src="{{ Storage::url($image->image) }}"
-                                        class="card-img-top" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        @endif
+                            @if ($image->isPortrait == true)
+                                <div class="col">
+                                    <div class="h-100">
+                                        <a href="{{ Storage::url($image->image) }}">
+                                            <img src="{{ Storage::url($image->image) }}" class="card-img-top"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            @endif
                         @endforeach
                     </div>
                 </div>
